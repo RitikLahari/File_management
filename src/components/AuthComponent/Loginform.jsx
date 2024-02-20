@@ -24,6 +24,7 @@ const Loginform = () => {
          return;
       }
       dispatch(signInUser(email,password,setSucess))
+      toast("Login successfull")
 
    } 
    useEffect(()=>{

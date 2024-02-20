@@ -25,6 +25,7 @@ const Registerform = () => {
          return;
       }
       dispatch(signUpUser(name,email,password));
+      toast("register successfully");
    }
   
 
