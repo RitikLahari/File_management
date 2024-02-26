@@ -12,7 +12,7 @@ const Registerform = () => {
     const [password,setPassword]=useState('');
     const [cpassword,setCpassword]=useState('');
     const dispatch=useDispatch();
-  
+    const [sucess,setSucess]=useState(false);
 
    const handleSubmit=(e)=>{
       e.preventDefault();
@@ -24,7 +24,7 @@ const Registerform = () => {
          toast.error("password do not match");
          return;
       }
-      dispatch(signUpUser(name,email,password));
+      dispatch(signUpUser(name,email,password,setSucess));
       toast("register successfully");
    }
   
