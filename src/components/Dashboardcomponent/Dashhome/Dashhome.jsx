@@ -14,7 +14,7 @@ const Dashhome = () => {
     }),
     shallowEqual);
   return (
-    <div className='col-md-12 w-100'>
+    <div className='col-md-12 w-100 color'>
        {
         !isLoading ?(
           <h1 className='display-1 my-5 text-center'>Loading...</h1>

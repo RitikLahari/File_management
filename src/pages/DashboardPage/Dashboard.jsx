@@ -11,6 +11,7 @@ import CreateFile from '../../components/Dashboardcomponent/CreateFile/CreateFil
 import FolderComponent from '../../components/Dashboardcomponent/FolderComponent/FolderComponent';
 import UploadFile from '../../components/Dashboardcomponent/UploadFile/UploadFile';
 import FileComponents from '../../components/Dashboardcomponent/FileComponents/FileComponents';
+import Footer from '../../components/Footer/Footer';
 
 
 const Dashboard = () => {
@@ -83,6 +84,8 @@ const Dashboard = () => {
           <Route path='folder/:folderId' element={<FolderComponent/>}/>
           <Route path='file/:fileId' element={<FileComponents/>}/>
       </Routes>
+
+      <Footer/>
     </>
   )
 }

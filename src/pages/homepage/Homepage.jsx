@@ -6,9 +6,12 @@ const Homepage = () => {
   return (
    <>
      <Navigation/>
+     <div className='style'>
      <h1 className='display-1 my-5 text-center bg-light'>Welcome</h1>
-     <div className='dashimg'>
+     {/* <div className='dashimg '>
           <img src={vg} alt='image'/>
+     </div> */}
+     
      </div>
    </>
   )

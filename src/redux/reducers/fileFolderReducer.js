@@ -6,7 +6,7 @@ const initialState={
     currentFolder:"root",
     userFolders:[],
     userFiles:[],
-    adminFolders:[] ,
+    adminFolders:[],
     adminFiles:[],
 }
 

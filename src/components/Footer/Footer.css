@@ -1,0 +1,20 @@
+.footer{
+    height: 40vh;
+    background-color: rgb(229, 238, 255);
+    border-radius: 25px 110px 60px;
+}
+.heading{
+    text-align: center;
+    color: rgb(16, 22, 26);
+}
+.link{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    color: black;
+    align-items: center;
+}
+.content p{
+    color: #000000;
+     text-align: center;
+}

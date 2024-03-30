@@ -19,7 +19,7 @@ const Showitem = ({ title, items, type }) => {
   };
 
   return (
-    <div className='w-100'>
+    <div className='w-100 color'>
       <h4 className='text-center border-bootom'>{title}</h4>
       <div className='row gap-2 py-4 px-1 flex-wrap'>
         {Array.isArray(items) &&
@@ -30,7 +30,7 @@ const Showitem = ({ title, items, type }) => {
               onDoubleClick={() => handleDoubleClick(item.docId)}
             >
               {type === "folder" ? (
-                <FcOpenedFolder />
+                <FcOpenedFolder /> 
               ) : (
                 <FcFile />
               )}
