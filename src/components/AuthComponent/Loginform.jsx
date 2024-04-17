@@ -36,7 +36,7 @@ const Loginform = () => {
   return (
    <form onSubmit={handleSubmit}>
          <div className="form-group my-2">
-            <input type="text" name='email' 
+            <input type="email" name='email' 
             className='form-control' placeholder='Email'
             value={email} 
             onChange={(e)=> setEmail(e.target.value)}/>

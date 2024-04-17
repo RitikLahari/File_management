@@ -77,7 +77,7 @@ const Dashboard = () => {
         setIsFileUploadedModelOpen={setIsFileUploadedModelOpen}
         />
        )
-     }
+     } 
    
       <Routes>
           <Route path="" element={<Dashhome/>}/>
