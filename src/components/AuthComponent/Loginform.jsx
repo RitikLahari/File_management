@@ -24,12 +24,13 @@ const Loginform = () => {
          return;
       }
       dispatch(signInUser(email,password,setSucess))
-      toast("Login successfull")
-
+       
    } 
    useEffect(()=>{
       if(sucess){
+         alert("Login successful");
          navigate("/dashboard");
+
       }
    },[sucess]);
 
