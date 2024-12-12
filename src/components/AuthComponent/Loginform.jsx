@@ -28,8 +28,8 @@ const Loginform = () => {
    } 
    useEffect(()=>{
       if(sucess){
-         alert("Login successful");
-         navigate("/dashboard");
+         toast("Login successfully");
+         navigate("/");
 
       }
    },[sucess]);

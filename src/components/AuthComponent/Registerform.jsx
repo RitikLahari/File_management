@@ -25,14 +25,23 @@ const Registerform = () => {
          return;
       }
       dispatch(signUpUser(name,email,password,setSucess));
-      toast("register successfully");
+      
    }
+
+   useEffect(()=>{
+      if(sucess){
+         toast("register successfully");
+         navigate("/dashboard");
+
+      }
+   },[sucess]);
   
 
 
 
   return (
    <form onSubmit={handleSubmit}>
+      <div className= '  '>
          <div className="form-group my-2">
             <input type="text" name='name' 
             className='form-control' placeholder='name'
@@ -57,6 +66,7 @@ const Registerform = () => {
          </div>
 
          <button type='submit' className='btn btn-primary my-2'>Submit</button>
+         </div>
    </form>
   )
 }

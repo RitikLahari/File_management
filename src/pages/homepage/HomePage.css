@@ -35,3 +35,36 @@
 .style{
     background-color: rgb(170, 255, 255);
 }
+
+.jk{
+    text-align: center;
+    font-size: xx-large;
+    text-decoration: double;
+    gap: 10;
+    
+}
+
+.A{
+    display: flex;
+    flex-direction: column;
+    gap: 10;
+}
+
+.B{
+   color: aliceblue;
+   background-color: black;
+}
+
+.C{
+    border: 1px;
+    border-radius: 100%;
+}
+
+.D{
+    text-align: center;
+    gap: 15;
+}
+.front{
+    display: flex;
+    justify-content: space-between;
+}

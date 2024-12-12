@@ -21,6 +21,8 @@ const logoutUser=()=>{
 //action creator
 
 export  const signInUser=(email,password,setSucess)=>(dispatch)=>{
+  
+  
     fire.auth().signInWithEmailAndPassword(email,password)
     
     
