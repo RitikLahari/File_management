@@ -14,6 +14,11 @@
         width: 240px;
         height: 240px;
      }
+     .front{
+        display: flex;
+        flex-direction: column;
+        
+    }
 }
 
 @media screen and (max-width:640px){
@@ -22,6 +27,11 @@
        width:60%;
        height: 60%;
     }
+    .front{
+        display: flex;
+        flex-direction: column;
+
+    }
 }
 
 @media screen and (max-width:837px){
@@ -29,6 +39,11 @@
        margin-left: 100px;
        width:60%;
        height: 60%;
+    }
+    .front{
+        display: flex;
+        flex-direction: column;
+        
     }
 }
 
