@@ -9,6 +9,7 @@ import { useEffect } from 'react';
 import { checkIsLoggedIn } from './redux/actionCreator/authActioncreator';
 import  {ToastContainer} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"
+import ThankyouPage from './components/homecomponent/ThankyouPage';
 const App =()=> {
 
  const dispatch=useDispatch();
@@ -26,6 +27,7 @@ const App =()=> {
          <Route path='/login' element={<Login/>}> </Route>
          <Route path='/register' element={<Register/>}> </Route>
          <Route path='/dashboard/*' element={<DashboardPage/>}> </Route>
+         <Route path='/thankyoupage' element={<ThankyouPage/>}></Route>
        </Routes>
     </div>
   );

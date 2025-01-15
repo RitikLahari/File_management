@@ -4,6 +4,8 @@
     border-radius: 25px 110px 60px;
 }
 .heading{
+    font-size: medium;
+    font-weight: 200;
     text-align: center;
     color: rgb(16, 22, 26);
 }
@@ -14,7 +16,11 @@
     color: black;
     align-items: center;
 }
-.content p{
-    color: #000000;
+.content{
+     justify-content: center;
+     align-items: center;
      text-align: center;
+     font-size: larger;
+     font-weight: 500;
+     gap: 10;
 }

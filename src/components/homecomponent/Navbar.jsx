@@ -13,7 +13,7 @@ const Navbar = () => {
  const dispatch=useDispatch();
   return (
   <nav className='navbar navbar-expand-lg navbar-dark bg-dark'>
-     <Link className='navbar-brand' to='/'>File mangement system</Link>
+     <Link className='navbar-brand  ml-5 text-justify ' to='/'>File mangement system</Link>
   
    <ul className='navbar-nav ms-auto me-5'>
       {  isAuthenticated?(
