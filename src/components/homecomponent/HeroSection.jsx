@@ -44,7 +44,7 @@ const HeroSection = () => {
             <p className="subheading">Folder and File Management website </p>
             <h1 className="hero-heading">Save your FILES and DOCUMENT freely</h1>
             <p className="hero-description">
-              Grow your career fast with the right mentor.
+            
             </p>
 
             {/* Join Free Button */}

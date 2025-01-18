@@ -16,9 +16,6 @@ const Footer = () => {
             <a href='https://in.linkedin.com/in/ritik-lahari-267213254'> <FaInstagramSquare /></a>
             <a href='https://in.linkedin.com/in/ritik-lahari-267213254'><FaLinkedin /></a>
         </div>
-    
-      
-
        <div className='content'>
           <p> @ copyright 3002 : all right reserve</p>
       

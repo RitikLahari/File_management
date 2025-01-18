@@ -25,16 +25,17 @@ const Registerform = () => {
          return;
       }
       dispatch(signUpUser(name,email,password,setSucess));
-      
+      toast("register successfully");
+      navigate("/login");
    }
 
-   useEffect(()=>{
-      if(sucess){
-         toast("register successfully");
-         navigate("/dashboard");
-
-      }
-   },[sucess]);
+   // useEffect(()=>{
+   //    if(sucess){
+   //       toast("register successfully");
+   //       navigate("/dashboard");
+   //       console.log("register")
+   //    }
+   // },[]);
   
 
 
