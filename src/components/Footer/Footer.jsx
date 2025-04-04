@@ -17,6 +17,7 @@ const Footer = () => {
             <a href='https://in.linkedin.com/in/ritik-lahari-267213254'><FaLinkedin /></a>
         </div>
        <div className='content'>
+          <p>File Management System </p>
           <p> @ copyright 3002 : all right reserve</p>
       
        </div>
