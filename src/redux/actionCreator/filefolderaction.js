@@ -151,14 +151,19 @@ export const updateFileData=(fileId,data)=>(dispatch)=>{
 
 export const uploadFile=(file,data,setSuccess)=>(dispatch)=>{
     console.log(data);
+    // if (!navigator.onLine) {
+    //     toast.error("You're offline. Please check your internet connection.");
+    //     setSuccess(false);
+    //     return;
+    //   }
    const uploadFileRef=fire.storage().ref(`file/${data.userId}/${data.name}`);
 
    uploadFileRef.put(file).on("state_changed",(snapshot)=>{
     const progress=Math.round(
         (snapshot.bytesTransferred/snapshot.totalBytes)*100
     );
-    console.log("upload" +progress + "%");
-   },
+    console.log("upload" +progress + "%");  
+   }, 
    (error)=>{
     console.log(error);
    },

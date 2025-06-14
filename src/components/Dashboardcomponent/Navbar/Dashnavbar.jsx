@@ -4,10 +4,6 @@ import {Link} from 'react-router-dom'
 import {  useSelector,useDispatch } from 'react-redux'
 import { signOutUser } from '../../../redux/actionCreator/authActioncreator';
 
-
-
-
-
 const Dashnavbar = () => {
 
 //get data from redux check the user is login or not 

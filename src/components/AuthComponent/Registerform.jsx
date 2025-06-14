@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState,useEffect } from 'react';
 
+import { useNavigate } from 'react-router-dom';
 
 import { useDispatch } from 'react-redux';
 import { signUpUser } from '../../redux/actionCreator/authActioncreator';
@@ -13,6 +14,7 @@ const Registerform = () => {
     const [cpassword,setCpassword]=useState('');
     const dispatch=useDispatch();
     const [sucess,setSucess]=useState(false);
+   const navigate = useNavigate();
 
    const handleSubmit=(e)=>{
       e.preventDefault();
@@ -26,7 +28,7 @@ const Registerform = () => {
       }
       dispatch(signUpUser(name,email,password,setSucess));
       toast("register successfully");
-      navigate("/login");
+      navigate("/");
    }
 
    // useEffect(()=>{
@@ -36,9 +38,6 @@ const Registerform = () => {
    //       console.log("register")
    //    }
    // },[]);
-  
-
-
 
   return (
    <form onSubmit={handleSubmit}>
