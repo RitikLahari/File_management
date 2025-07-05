@@ -9,5 +9,6 @@ export const DELETE_FOLDER="DELETE_FOLDER";
 export const ADD_FILES="ADD_FILES";
 export const CREATE_FILE="CREATE_FILE";
 export const SET_FILE_DATA="SET_FILE_DATA"
+export const DELETE_FILE="DELETE_FILE";
 
 

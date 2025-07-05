@@ -53,7 +53,17 @@ const fileFolderReducer=(state=initialState,action)=>{
                 ...state,
                 userFiles:state.userFiles.map((file)=>file.docId===fileId ? currentFile:file),
                 
-            }
+            };
+        case types.DELETE_FILE:
+            return {
+                ...state,
+                userFiles: state.userFiles.filter((file) => file.docId !== action.payload),
+            };
+        case types.DELETE_FOLDER:
+            return {
+                ...state,
+                userFolders: state.userFolders.filter((folder) => folder.docId !== action.payload),
+            };
 
         default:
             return state;

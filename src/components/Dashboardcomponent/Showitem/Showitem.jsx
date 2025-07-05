@@ -3,8 +3,9 @@ import { FcOpenedFolder, FcFile } from "react-icons/fc";
 import "./Showitem.css";
 import { useNavigate } from 'react-router-dom';
 import { changeFolder, getFolders } from '../../../redux/actionCreator/filefolderaction';
+import { filedelete,Folderdelete } from '../../../redux/actionCreator/filefolderaction';
 import { useDispatch } from 'react-redux';
-
+import { MdDelete } from "react-icons/md";
 const Showitem = ({ title, items, type }) => {
   const navigate = useNavigate();
   const dispatch=useDispatch();
@@ -35,6 +36,24 @@ const Showitem = ({ title, items, type }) => {
                 <FcFile />
               )}
               {item.data && item.data.name ? item.data.name : "Unnamed"}
+
+              <button
+              onClick={() => {
+                    const confirmDelete = window.confirm(`Are you sure you want to delete this ${type}?`);
+                    if (!confirmDelete) return;
+
+                    if (type === "folder") {
+                      dispatch(Folderdelete(item.docId));
+                    } else {
+                      dispatch(filedelete(item.docId, item.data.userId, item.data.name));
+                    }
+                  }}
+
+              className="delete-btn"
+              title="Delete"
+            >
+              <MdDelete />
+            </button>
             </p>
           ))}  
       </div>

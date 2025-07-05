@@ -4,7 +4,6 @@ import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 //actions
 //add folde
-
 const addFolder =(payload)=>({
     type:types.CREATE_FOLDER,
     payload
@@ -23,8 +22,6 @@ const setChangeFolder=(payload)=>({
     type:types.CHANGE_FOLDER,
     payload,
 })
-
-
 //action creator
 
 export const createFolder=(data)=>(dispatch)=>{
@@ -189,4 +186,56 @@ export const uploadFile=(file,data,setSuccess)=>(dispatch)=>{
    
    
    );
+};
+
+
+
+// delete file and folder
+
+//action
+const deletefile = (payload) => ({
+  type: types.DELETE_FILE,
+  payload,
+});
+
+// Async Action Creator
+export const filedelete=(fileId,userId,fileName)=>(dispatch) =>{
+    console.log("working deletion")
+    fire.firestore()
+    .collection("files")
+    .doc(fileId)
+    .delete()
+    .then(() => {
+      // 2. Delete from Storage
+      const fileRef = fire.storage().ref(`file/${userId}/${fileName}`);
+      fileRef
+        .delete()
+        .then(() => {
+          dispatch(deletefile(fileId));
+          toast.success("File and uploaded file deleted!");
+        })
+        .catch(() => {
+          toast.error("File data deleted but failed to remove from storage");
+        });
+    })
+    .catch(() => {
+      toast.error("Failed to delete file");
+    });
+      
+}
+
+
+
+export const Folderdelete = (folderId) => (dispatch) => {
+  fire.firestore()
+    .collection("folders")
+    .doc(folderId)
+    .delete()
+    .then(() => {
+      dispatch({ type: types.DELETE_FOLDER, payload: folderId });
+      toast.success("Folder deleted successfully!");
+    })
+    .catch(() => {
+      toast.error("Failed to delete folder");
+    });
 };
