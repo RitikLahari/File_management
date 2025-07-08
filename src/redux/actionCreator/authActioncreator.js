@@ -32,33 +32,68 @@ export  const signInUser=(email,password,setSucess)=>(dispatch)=>{
             displayName:user.user.displayName}));
         setSucess(true);
     }).catch((error)=>{
+        toast.error("invalid credential")
        console.log(error);
     })
 }
 
 //this is for registeration where user register by it detail
-export const signUpUser=(name,email,password,setSucess)=>(dispatch)=>{
-    fire.auth().createUserWithEmailAndPassword(email,password).then((user)=>{
-        fire.auth().currentUser.updateProfile({
-            displayName:name,
-        })
-        .then(async ()=>{
-            const currentUser=await fire.auth().currentUser;
-           dispatch(loginUser({
-            uid:currentUser.uid,
-            name:currentUser.displayName,
-            email:currentUser.email,}));
-           setSucess(true);
+// export const signUpUser=(name,email,password,setSucess)=>(dispatch)=>{
+//     fire.auth().createUserWithEmailAndPassword(email,password).then((user)=>{
+//         fire.auth().currentUser.updateProfile({
+//             displayName:name,
+//         })
+//         .then(async ()=>{
+//             const currentUser=await fire.auth().currentUser;
+//            dispatch(loginUser({
+//             uid:currentUser.uid,
+//             name:currentUser.displayName,
+//             email:currentUser.email,}));
+//            setSucess(true);
 
-        }).catch((error)=>{
-            console.log(error);
-        })
-    }).catch((error)=>{
-        if(error.code=== "auth/email-already-in-use")
-        {
-            toast.error("Email already exist");
-        }
-    })
+//         }).catch((error)=>{
+//             console.log(error);
+//         })
+//     }).catch((error)=>{
+//         if(error.code=== "auth/email-already-in-use")
+//         {
+//             toast.error("Email already exist");
+//         }
+//     })
+// };
+
+export const signUpUser = (name, email, password, setSuccess) => async (dispatch) => {
+  try {
+    const userCredential = await fire.auth().createUserWithEmailAndPassword(email, password);
+
+    // Update display name
+    await userCredential.user.updateProfile({
+      displayName: name,
+    });
+
+    // Now get updated user info
+    const currentUser = fire.auth().currentUser;
+
+    dispatch(
+      loginUser({
+        uid: currentUser.uid,
+        name: currentUser.displayName,
+        email: currentUser.email,
+      })
+    );
+
+    setSuccess(true);
+    toast.success("Account created successfully!");
+
+  } catch (error) {
+    if (error.code === "auth/email-already-in-use") {
+      toast.error("Email already exists");
+    } else {
+      toast.error(error.message || "Signup failed");
+      console.error(error);
+    }
+    setSuccess(false);
+  }
 };
 export const signOutUser=()=>(dispatch)=>{
     fire.auth().signOut().then(()=>{

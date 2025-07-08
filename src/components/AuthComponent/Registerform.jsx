@@ -19,25 +19,18 @@ const Registerform = () => {
    const handleSubmit=(e)=>{
       e.preventDefault();
       if(!name || !email || !password || !cpassword){
-         toast.error("fill all detail");
+         toast.warn("fill all detail");
          return;
       }
       if(password !==cpassword){
-         toast.error("password do not match");
+         toast.warn("password do not match");
          return;
       }
       dispatch(signUpUser(name,email,password,setSucess));
-      toast("register successfully");
-      navigate("/");
+       
    }
 
-   // useEffect(()=>{
-   //    if(sucess){
-   //       toast("register successfully");
-   //       navigate("/dashboard");
-   //       console.log("register")
-   //    }
-   // },[]);
+
 
   return (
    <form onSubmit={handleSubmit}>

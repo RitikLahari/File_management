@@ -20,7 +20,7 @@ const Loginform = () => {
       console.log(email,password);
       if(!email || !password)
       {
-         toast.error("plz fill the entrys");
+         toast.warn("plz fill the entrys");
          return;
       }
       dispatch(signInUser(email,password,setSucess))
@@ -28,7 +28,7 @@ const Loginform = () => {
    } 
    useEffect(()=>{
       if(sucess){
-         toast("Login successfully");
+         toast.success("Login successfully");
          navigate("/");
 
       }
