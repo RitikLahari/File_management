@@ -60,6 +60,7 @@ const Registerform = () => {
               onChange={(e) => setEmail(e.target.value)}
               style={{ paddingLeft: '2.2rem', borderRadius: '0.75rem', border: '1px solid #d1d5db', height: '2.7rem', fontSize: '1rem' }}
               autoComplete="username"
+              required
             />
           </div>
           <div className="form-group my-3" style={{ position: 'relative' }}>
@@ -73,6 +74,9 @@ const Registerform = () => {
               onChange={(e) => setPassword(e.target.value)}
               style={{ paddingLeft: '2.2rem', borderRadius: '0.75rem', border: '1px solid #d1d5db', height: '2.7rem', fontSize: '1rem' }}
               autoComplete="new-password"
+               minLength={6}
+              maxLength={20}
+              required
             />
           </div>
           <div className="form-group my-3" style={{ position: 'relative' }}>
