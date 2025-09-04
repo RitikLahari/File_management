@@ -27,37 +27,38 @@ const HeroSection = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
   const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "Creative Director",
-      company: "Design Studio Inc",
-      content:
-        "This file management system has revolutionized how our team collaborates. The intuitive interface and powerful features make organizing our creative assets effortless.",
-      avatar:
-        "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
-      rating: 5
-    },
-    {
-      name: "Michael Chen",
-      role: "Tech Lead",
-      company: "Innovation Labs",
-      content:
-        "The security features are top-notch, and the API integration possibilities are endless. Perfect for our enterprise needs with excellent performance.",
-      avatar:
-        "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
-      rating: 5
-    },
-    {
-      name: "Emily Rodriguez",
-      role: "Project Manager",
-      company: "Global Solutions",
-      content:
-        "Managing files across multiple projects has never been easier. The organizational tools and collaboration features are exactly what we needed.",
-      avatar:
-        "https://images.pexels.com/photos/712513/pexels-photo-712513.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
-      rating: 5
-    }
-  ];
+  {
+    name: "Ravi Sharma",
+    role: "Software Engineer",
+    company: "Infosys",
+    content:
+      "This platform has completely changed how I manage project files. The upload speed and security features are outstanding.",
+    avatar:
+      "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
+    rating: 5
+  },
+  {
+    name: "Ananya Gupta",
+    role: "Product Manager",
+    company: "Tata Consultancy Services",
+    content:
+      "Collaboration has never been easier. The folder customization and permissions control make our workflow super smooth.",
+    avatar:
+      "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
+    rating: 4
+  },
+  {
+    name: "Aditya Verma",
+    role: "UI/UX Designer",
+    company: "Wipro Digital",
+    content:
+      "The interface is clean and simple. Managing design assets across teams is now hassle-free. Highly recommended for designers!",
+    avatar:
+      "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
+    rating: 5
+  }
+];
+
 
   const features = [
     {
@@ -140,12 +141,12 @@ const HeroSection = () => {
           them anytime, anywhere.
         </p>
         <div className="mt-6 flex justify-center gap-4">
-          <div className="px-6 py-3 bg-indigo-600 text-white rounded-xl shadow-lg hover:bg-indigo-700">
+          <div className="px-6 py-3 ">
            <Link  to='/dashboard' className='btn btn-primary ' >Get Started</Link>
           </div>
-          <button className="px-6 py-3 bg-gray-100 text-indigo-600 rounded-xl shadow-lg hover:bg-gray-200">
-            Learn More
-          </button>
+          <div className="px-6 py-3 ">
+           <Link  to='/learn_more' className='btn btn-primary ' >Learn More</Link>
+          </div>
         </div>
       </section>
 
