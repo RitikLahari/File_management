@@ -18,6 +18,7 @@ import {
   FolderOpenDot,
   HardDriveUpload
 } from "lucide-react";
+import { FaReact } from "react-icons/fa";
 import {Link} from 'react-router-dom'
 import { ArrowRight } from "lucide-react";
 import PropTypes from "prop-types"; // ✅ Added for prop validation

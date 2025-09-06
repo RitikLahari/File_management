@@ -17,7 +17,7 @@
   font-family: 'Fira Code', monospace; /* Ensure both use same font */
   font-size: 14px; /* Same size */
   line-height: 1.4; 
-  white-space: pre; /* Match whitespace */
+ 
   overflow: auto;
 }
 
@@ -27,7 +27,7 @@
   caret-color: #000;
   z-index: 2;
   resize: none;
-  padding: 1; /* Remove padding to sync */
+ padding: 0 0 0 3rem; /* 👈 add left padding for line numbers */
   border: none;
   outline: none;
 }
@@ -35,8 +35,7 @@
 .code-output {
   z-index: 1;
   pointer-events: none;
-  margin: 0; /* Remove extra margin */
-  padding: 0; /* Remove padding */
+   padding: 0 0 0 3rem; /* 👈 add left padding for line numbers */
 }
 
 .code-output pre {

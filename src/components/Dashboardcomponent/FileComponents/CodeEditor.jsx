@@ -47,13 +47,13 @@ const CodeEditor = ({ fileName, data, setData }) => {
     <div className="row px-5 mt-3">
       <div className="col-md-12 mx-auto code-edit-container p-3">
         <textarea
-          className="code-input w-100"
+          className="code-input w-100 "
           value={data}
           onKeyDown={handleKeyDown}
           onChange={(e) => setData(e.target.value)}
           onScroll={handleScroll}
         />
-        <pre className="code-output" ref={outputRef}>
+        <pre className="code-output pr-1" ref={outputRef}>
           <SyntaxHighlighter
             language={Codes[fileName.split(".")[1]] || "text"}
             showLineNumbers
