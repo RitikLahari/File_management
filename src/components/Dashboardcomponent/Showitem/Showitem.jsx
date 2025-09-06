@@ -23,7 +23,7 @@ const Showitem = ({ title, items, type }) => {
   };
 
   return (
-    <div className="w-full bg-gray-50 rounded-lg shadow-sm p-4">
+    <div className="w-full bg-white rounded-lg shadow-sm p-4">
       <h4 className="text-center font-semibold text-lg border-b pb-2 mb-4">
         {title}
       </h4>
