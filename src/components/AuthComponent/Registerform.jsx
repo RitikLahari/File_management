@@ -26,8 +26,16 @@ const Registerform = () => {
          return;
       }
       dispatch(signUpUser(name,email,password,setSucess));
+      
        
    }
+
+    useEffect(()=>{
+         if(sucess){
+            // toast.success("Registered successfully");
+            navigate("/login");
+         }
+      },[sucess]);
 
 
 

@@ -215,7 +215,7 @@ export const filedelete=(fileId,userId,fileName)=>(dispatch) =>{
           toast.success("File and uploaded file deleted!");
         })
         .catch(() => {
-          toast.error("File data deleted but failed to remove from storage");
+          toast.error("File data deleted ");
         });
     })
     .catch(() => {

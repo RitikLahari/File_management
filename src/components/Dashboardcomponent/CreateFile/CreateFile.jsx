@@ -124,7 +124,6 @@ const checkFilePresent = (name,exten ) => {
                             placeholder='file name eg: file.txt,.html' value={fileName}
                              onChange={(e)=>setFileName(e.target.value)}></input>
                         </div>
-
                         <button type="submit" className='btn btn-primary mt-5 form-control'>
                             create File
                         </button>

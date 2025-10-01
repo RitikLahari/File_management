@@ -18,7 +18,7 @@ const Dashnavbar = () => {
       <>
         <li className='nav-item mx-4'>
         <p  className='my-0 mt-1 mx-2'>
-           <span className='text-dark'>Welcome     </span>
+           {/* <span className='text-dark'>Welcome     </span> */}
            <span className='text-dark box'>{user.displayName}</span>
         </p>
      </li>

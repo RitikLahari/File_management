@@ -2,7 +2,7 @@
 import * as types from "../actionTypes/authActionTypes";
 import fire from "../../config/firebase";
 import { toast } from "react-toastify";
-
+import { useNavigate } from "react-router-dom";
 
 
 const loginUser=(payload)=>{
@@ -63,6 +63,7 @@ export  const signInUser=(email,password,setSucess)=>(dispatch)=>{
 // };
 
 export const signUpUser = (name, email, password, setSuccess) => async (dispatch) => {
+  //  const navigate=useNavigate();
   try {
     const userCredential = await fire.auth().createUserWithEmailAndPassword(email, password);
 
@@ -84,6 +85,7 @@ export const signUpUser = (name, email, password, setSuccess) => async (dispatch
 
     setSuccess(true);
     toast.success("Account created successfully!");
+    // navigate("/login");
 
   } catch (error) {
     if (error.code === "auth/email-already-in-use") {

@@ -157,47 +157,26 @@ const HeroSection = () => {
     {/* Gradient overlay for fading edges */}
     <div className="absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-white to-transparent z-10"></div>
     <div className="absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-white to-transparent z-10"></div>
-
-    <div className="flex gap-10 animate-scroll text-4xl font-extrabold whitespace-nowrap">
-      <span className="text-transparent bg-clip-text bg-gradient-to-r from-black  via-black to-black hover:scale-110 transition-transform">
-        React.js
+    <div className="flex gap-10 animate-scroll text-3xl font-extrabold whitespace-nowrap">
+      <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 hover:scale-110 transition-transform">
+        Secure Cloud Storage
       </span>
-      <span className="text-transparent bg-clip-text  bg-black hover:scale-110 transition-transform">
-        Redux 
+      <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 via-teal-600 to-cyan-600 hover:scale-110 transition-transform">
+        Lightning Fast Uploads
       </span>
-      <span className="text-transparent bg-clip-text bg-gradient-to-r from-black  via-black to-black hover:scale-110 transition-transform">
-        Firebase
+      <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 via-orange-600 to-red-600 hover:scale-110 transition-transform">
+        Collaboration Made Easy
       </span>
-       <span className="text-transparent bg-clip-text bg-gradient-to-r from-black  via-black to-black hover:scale-110 transition-transform">
-        Node.js
+      <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:scale-110 transition-transform">
+        Access Anywhere, Anytime
       </span>
-      <span className="text-transparent bg-clip-text  bg-black hover:scale-110 transition-transform">
-        Express.js
-      </span>
-      <span className="text-transparent bg-clip-text  bg-gradient-to-r from-black  via-black to-black transition-transform">
-        Tailwind CSS
-      </span>
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-black  via-black to-black hover:scale-110 transition-transform">
-        React.js
-      </span>
-      <span className="text-transparent bg-clip-text  bg-black hover:scale-110 transition-transform">
-        Redux
-      </span>
-      <span className="text-transparent bg-clip-text bg-gradient-to-r from-black  via-black to-black hover:scale-110 transition-transform">
-        Firebase
-      </span>
-      <span className="text-transparent bg-clip-text bg-gradient-to-r from-black  via-black to-black hover:scale-110 transition-transform">
-        Node.js
-      </span>
-      <span className="text-transparent bg-clip-text  bg-black hover:scale-110 transition-transform">
-        Express.js
-      </span>
-      <span className="text-transparent bg-clip-text  bg-gradient-to-r from-black  via-black to-black transition-transform">
-        Tailwind CSS
+      <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-cyan-600 to-green-600 hover:scale-110 transition-transform">
+        99.9% Uptime Guarantee
       </span>
     </div>
   </div>
 </section>
+
 
       {/* Features Section */}
       <section className="grid md:grid-cols-3 gap-8 px-6 md:px-16 py-12">
@@ -214,7 +193,7 @@ const HeroSection = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="bg-indigo-50 py-12 px-6">
+      {/* <section className="bg-indigo-50 py-12 px-6">
         <div className="grid md:grid-cols-4 gap-8 text-center">
           {stats.map((stat, index) => (
             <div key={index} className="flex flex-col items-center">
@@ -224,7 +203,7 @@ const HeroSection = () => {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* Testimonials Section */}
       <section className="py-12 px-6 text-center">
